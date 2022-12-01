@@ -4,28 +4,32 @@
         <meta charset="utf-8">
         <title> Huellitas - Petshop </title>
         <link rel="stylesheet" href="stilo.css">
-        <style>
-            .fondo {
-              background-image: url(imagenes/fondos/fondo\ gris.png);
-            }
-        </style>
+        <script src="https://kit.fontawesome.com/e59a576c11.js" crossorigin="anonymous"></script>
+        <script defer src="index.js"></script>
     </head>
     <body class="fondo">
         
-        <header>
-            <img src="imagenes/icono.png" alt="icono de huellitas">
-            <nav class="menu">
-                <label class="logo"></label>
+        <header class="header">
+            <!-- <h1> <img src="imagenes/icono.png" alt="icono de huellitas"> </h1> -->
+            <div class="caja">
+                <nav class="nav">
+                    
+                    <a href="#" class="logo nav-link" > Huellitas </a>
 
-                <ul class="menu-items">
-                    <li> <a href="index.html"> Home </a> </li>
-                    <li> <a href="productos.html"> Productos </a></li>
-                    <li> <a href="contacto.html"> Contacto</a> Contacto </li>
-                </ul>
-            </nav>
+                    <button class="nav-toggle" aria-label="Abrir menú"> 
+                        <i class="fa-solid fa-bars"></i> 
+                    </button>
+
+                    <ul class="nav-menu nav-menu_visible">
+                        <li class="nav-menu-items"> <a href="index.html" class="nav-menu-link nav-link"> Home </a> </li>
+                        <li class="nav-menu-items"> <a href="productos.html" class="nav-menu-link nav-link"> Productos </a></li>
+                        <li class="nav-menu-items"> <a href="contacto.html" class="nav-menu-link nav-link nav-menu-link_active"> Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
         </header>
         <main>
-
+            <h2>holaaaaa</h2>
         </main>
         <footer>
             <img src="imagenes/footer/Meow meow hola humano (1).png" alt="imagen de huellitas">
