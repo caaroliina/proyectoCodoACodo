@@ -1,0 +1,271 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif; 
+    padding: 90px 20px 0px;
+    background-image: url(imagenes/fondos/fondo\ gris.png);
+}
+
+.fondo{
+    padding: 0;
+}
+/*  ----------------BARRA NAVEGACION ----------------  */
+.header {
+    background-color: lightslategray;
+    height: 80px;
+    position: fixed;
+    width:  100%;
+    top: 0;
+    left: 0;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+
+    max-width: 992px;
+    margin: 0 auto;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+}
+
+.logo {
+    font-size: 40px;
+    font-weight: bold;
+    padding: 0 40px;
+    line-height:  80px;
+}
+
+.nav-menu {
+    display: flex;
+    margin-right: 40px;
+    list-style: none;
+
+}
+
+.nav-menu-items{
+    font-size: 18px;
+    margin: 0 10px;
+    line-height: 80px;
+    text-transform: uppercase;
+    width: max-content;
+}
+
+.nav-menu-link{
+    padding: 8px 12px;
+    border-radius: 3px;
+}
+
+.nav-menu-link:hover,
+.nav-menu-link_active{
+    background-color: rgb(84, 100, 117);
+    transition: 0.5s;
+}
+
+.nav-toggle {
+    color: white;
+    background: none;
+    border: none;
+    font-size: 30px;
+    padding: 0 20px;
+    line-height: 60px;
+    cursor: pointer;
+
+    display: none;
+}
+/* --------------------  MAIN --------------------------*/
+
+.titulo-intro{
+    margin-top: 30px;
+    padding: 100px 50px 0;
+    color: rgb(79, 99, 118);
+    font-size: 50px;
+}
+.parrafo-intro{
+    padding: 20px 40px;
+    font-size: 30px;
+}
+.productos {
+    display: flex;
+    padding: 10px 20%;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.box-productos{
+    justify-content: space-around;
+    background-color: slategray;
+    border-radius: 5px;
+    margin: 20px 30px;
+    line-height: 50px;
+    text-transform: uppercase;
+    width: max-content;
+    font-size: 25px;
+    padding: 10%;
+}
+
+.productos-link{
+    color: white;
+    text-decoration: none;
+}
+
+/* ------------------- FORMULARIO ---------------------*/
+
+.container{
+    /* border: 3px; */
+    max-width: 90%;
+    margin: auto;
+    margin-top: 20px;
+}
+.formulario{
+/*     border: 3px solid blueviolet; */
+    border-top: 2px solid black;
+    max-width: 400px;
+    padding: 30px 50px;
+    margin: auto;
+    margin-top: 10px;
+    background: rgba(112, 128, 144, 0.553);
+}
+
+.titulo-formulario{
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 20px;
+    letter-spacing: 3px;
+}
+
+.form-input{
+    margin-bottom: 30px;
+}
+
+.form-input label{
+    display: block;
+    margin-top: 10px;
+    font-size: 15px;
+}
+.form-input input{
+    width: 100%;
+    border: none;
+    outline: none;
+    background: none;
+    border-bottom: 1px solid black;
+}
+
+.form-input input:focus + label{
+    font-weight: bold;
+    font-size: 15.5px;
+}
+
+.form-buttom input{
+    background: lightslategray;
+    color: white;
+    padding: 10px 50px;
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+    margin: auto;
+    margin-top: 30px;
+    border: none;
+    border-radius: 5px;
+    transition: 1s all;
+    cursor: pointer;
+}
+
+.form-buttom input:hover{
+    background: slategray;
+    transform: scale(1.05);
+} 
+
+.warnings{
+    width: 200px;
+    text-align: center;
+    margin: auto;
+    color: #975257;
+    padding-top: 20px;
+}
+/* ----------------- FOOTER --------------------- */
+/* .fondo-footer{
+    background: lightslategray;
+    width: 100%;
+}
+
+.footer{
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+}
+
+.logo-huellitas{
+    width: 150px;
+    height: 170px;
+}
+
+.copyright{
+    color: white;
+    font-size: 13px;
+    margin: 10px;
+    text-align: center;
+    bottom: 20px;
+} */
+
+@media (max-width: 768px){
+    body {
+        padding-top: 70px;
+    }
+    
+    .header {
+        height: 60px;
+    }
+    
+    .logo {
+        font-size: 25px;
+        padding: 0 20px;
+        line-height:  60px;
+    }
+    
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+        margin-right: 20px;
+        background-color: gray;
+        position: fixed;
+        left: 0;
+        top: 60px;
+        width: 100%;
+        padding: 20px 0;
+
+        height: calc(100% - 60px);
+        overflow-y: auto;
+
+        left: 100%;
+        transition: left 0.3s;
+        }
+    
+    .nav-menu-items{
+        line-height: 70px;
+    }
+    .nav-menu-link:hover,
+    .nav-menu-link_active{
+        background: none;
+        color: rgb(84, 100, 117);
+    }
+    .nav-toggle{
+        display: block;
+    }
+
+    .nav-menu_visible{
+        left: 0;
+    }
+
+    .nav-toggle:focus:not(:focus-visible){
+        outline: none;
+    }
+}
