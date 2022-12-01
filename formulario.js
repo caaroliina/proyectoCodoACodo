@@ -1,23 +1,44 @@
-const formulario = document.getElementById('formulario');
-const inputs = document.querySelectorAll('#formulario input');
+const nombre = document.getElementById("nombre");
+const apellido = document.getElementById("apellido");
+const email = document.getElementById("email");
+const telefono = document.getElementById("telefono");
+const contraseña = document.getElementById("contraseña");
+const terminos = document.getElementById("checkbox");
+const form = document.getElementById("formulario");
+const parrafo = document.getElementById("warnings");
 
-const expresiones = {
-	usuario: /^[a-zA-Z0-9\_\-]{4,16}$/, // Letras, numeros, guion y guion_bajo
-	nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
-	password: /^.{4,12}$/, // 4 a 12 digitos.
-	correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-	telefono: /^\d{7,14}$/ // 7 a 14 numeros.
-}
+form.addEventListener("submit", e=>{
+    e.preventDefault()
+    let warnings = ""
+    let entrar = false
+    let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+    parrafo.innerHTML = ""
 
-const validarFormulario = (e) => {
-    e.target.name
-}
+    if(nombre.value.lent < 3){
+        warnings += 'El nombre no es valido'
+        entrar = true
+    }
+    if(apellido.value.lent<3){
+        warnings += 'El apellido no es valido'
+        entrar = true
+    }
+    if(!regexEmail.test(email.value)){
+        warnings += 'El email no es valido'
+        entrar = true
+    }
 
-inputs.forEach((input) => {
-    input.addEventListener('keyup', validarFormulario);
-    input.addEventListener('blur', validarFormulario);
-});
+    if(telefono.value.lent<9){
+        warnings += 'el telefono no es valido'
+        entrar = true
+    }
+    if(pass.value.length < 8){
+        warnings += 'La contraseña no es valida'
+        entrar = true
+    }
+    if(entrar){
+        parrafo.innerHTML = warnings
+    } else {
+        parrafo.innerHTML = "Enviado"
+    }
 
-formulario.addEventListener('submit', (e) => {
-    e.preventDefault();
 });
