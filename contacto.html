@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="stilo.css">
         <script src="https://kit.fontawesome.com/e59a576c11.js" crossorigin="anonymous"></script>
         <script defer src="index.js"></script>
+        <script defer src="formulario.js"></script>
     </head>
     <body class="fondo">
         
@@ -33,57 +34,56 @@
                 <form action="#" class="formulario" id="formulario">
                     <p class="titulo-formulario">Regístrate</p>
 
-                    <div class="form-input">
-                        <input type="text" id="nombre" class="input-padron" required>
+                    <div class="form-input" id="grupo__nombre">
+                        <input type="text" name="nombre" id="nombre" class="input-padron" required>
                         <label for="nombre"> Nombre* </label>
                         <p></p>
                     </div>
 
-                    <div class="form-input">
-                        <input type="text" id="apellido" class="input-padron" required>
+                    <div class="form-input" id="apellido">
+                        <input type="text" name="apellido" id="apellido" class="input-padron" required>
                         <label for="apellido"> Apellido* </label>
                         <p></p>
                     </div>
 
-                    <div class="form-input">
-                        <input type="email" id="email" class="input-padron" required placeholder="email@dominio.com">
+                    <div class="form-input" id="grupo__email">
+                        <input type="email" name="email" id="email" class="input-padron" required placeholder="email@dominio.com">
                         <label for="email"> Correo Electrónico </label>
                         <p></p>
                     </div>
 
-                    <div class="form-input">
-                        <input type="tel" id="telefono" class="input-padron" required placeholder="(XX) XXXX XXXX">
+                    <div class="form-input" id="grupo__telefono">
+                        <input type="tel" name="telefono" id="telefono" class="input-padron" required placeholder="(XX) XXXX XXXX">
                         <label for="telefono"> Teléfono </label>
                         <p></p>
                     </div>
 
-                    <div class="form-input">
-                        <input type="password" id="password" class="input-padron" required></input>
+                    <div class="form-input" id="grupo__contraseña">
+                        <input type="password" name="contraseña" id="password" class="input-padron" required></input>
                         <label for="password">Contraseña</label>
                         <p></p>
                     </div>
 
-                    <div class="form-input">
-                        <input type="password" id="repetirpassword" class="input-padron" required></input>
-                        <label for="repetirpassword">Repetir Contraseña</label>
+
+                    <div id="grupo__checkbox">
+                        <input type="checkbox" name="checkbox" id="form-termsAndConditions" class="form-termsAndConditions" required> He leído y acepto los <a href="#">Terminos y condiciones</a>  </input>
                         <p></p>
                     </div>
 
-                    <div>
-                        <input type="checkbox" id="form-termsAndConditions" class="form-termsAndConditions" required> He leído y acepto los <a href="#">Terminos y condiciones</a>  </input>
-                        <p></p>
-                    </div>
-
-                    <div class="form-buttom">
-                        <input type="submit" value="Enviar" required>
+                    <div class="form-buttom" id="grupo__contraseña">
+                        <input type="submit" name="enviar" value="Enviar" required>
+                        <p class="warnings" id="warnings"></p>
                     </div>
                     
 
                 </form>
             </div>
         </main>
-        <footer>
-            <img src="imagenes/footer/Meow meow hola humano (1).png" alt="imagen de huellitas">
+        <footer class="fondo-footer">
+            <div class="footer">
+                <img src="imagenes/icono.png" alt="icono de huellitas" class="logo-huellitas">
+            </div>
+            <p class="copyright"> &copy Copyright Petshop Huellitas - 2022</p>
         </footer>
     </body>
 </html>
