@@ -61,6 +61,7 @@ body {
     padding: 8px 12px;
     border-radius: 3px;
 }
+
 .nav-menu-link:hover,
 .nav-menu-link_active{
     background-color: rgb(84, 100, 117);
@@ -78,9 +79,43 @@ body {
 
     display: none;
 }
+/* --------------------  MAIN --------------------------*/
 
+.titulo-intro{
+    margin-top: 30px;
+    padding: 100px 50px 0;
+    color: rgb(79, 99, 118);
+    font-size: 50px;
+}
+.parrafo-intro{
+    padding: 20px 40px;
+    font-size: 30px;
+}
+.productos {
+    display: flex;
+    padding: 10px 20%;
+    justify-content: space-around;
+    list-style: none;
+}
 
-/* FORMULARIO */
+.box-productos{
+    justify-content: space-around;
+    background-color: slategray;
+    border-radius: 5px;
+    margin: 20px 30px;
+    line-height: 50px;
+    text-transform: uppercase;
+    width: max-content;
+    font-size: 25px;
+    padding: 10%;
+}
+
+.productos-link{
+    color: white;
+    text-decoration: none;
+}
+
+/* ------------------- FORMULARIO ---------------------*/
 
 .container{
     /* border: 3px; */
@@ -157,29 +192,36 @@ body {
     padding-top: 20px;
 }
 /* ----------------- FOOTER --------------------- */
-.fondo-footer{
-    background: lightslategray;
-    width: 100%;
+.copyright{
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    font-size: 15px;
+} 
+
+.texto-footer{
+    font-size: 20px;
+    color: white;
 }
 
-.footer{
-    padding: 10px 0;
-    text-align: center;
-    width: 100%;
+.items-footer{
+    display: flex;
+    padding: 10%;
+    justify-content: space-around;
 }
 
 .logo-huellitas{
-    width: 150px;
-    height: 170px;
-}
+    height: 150px;
+    width: 190px;
+    position: absolute;
+} 
 
-.copyright{
-    color: white;
-    font-size: 13px;
-    margin: 10px;
-    text-align: center;
-    bottom: 20px;
-}
+.footer{
+    position: relative;
+    background:  slategrey;
+    padding: 5px;
+    align-items: center;
+} 
 
 @media (max-width: 768px){
     body {
